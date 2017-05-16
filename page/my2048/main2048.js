@@ -178,9 +178,9 @@ document.addEventListener('touchstart', function (event) {
 
 });
 
-document.addEventListener("touchmove",function(event){
+/*document.addEventListener("touchmove",function(event){
 	event.preventDefault();	
-});
+});*/
 
 document.addEventListener('touchend', function (event) {
 	endx = event.changedTouches[0].pageX;
@@ -189,7 +189,7 @@ document.addEventListener('touchend', function (event) {
 	var deltax = endx - startx;
 	var deltay = endy - starty;
 
-	if (Math.abs(deltax) < 0.3 * documentWidth && Math.abs(deltay) < 0.3 * documentWidth) {
+	if (Math.abs(deltax) < 0.1 * documentWidth && Math.abs(deltay) < 0.1 * documentWidth) {
 		return;
 	}
 	if (Math.abs(deltax) >= Math.abs(deltay)) {
